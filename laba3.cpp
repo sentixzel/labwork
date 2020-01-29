@@ -1,47 +1,45 @@
-#include <iostream>
+#include <iostream> 
 
-struct someStruct
+struct human
 {
-	int i;
-	char c;
-	double d;
-	bool b;
-	
+	int age;
+	char gender;
+	double weight;
+	bool married;
 };
 
-struct anotherStruct
+struct road
 {
-	bool b;
-	char c;
-	int i;
-	double d;
-};
+	bool closed;
+	char type;
+	int maxSpeed;
+	double length;
+}
 
 #pragma pack(1)
-struct lastStruct
+struct animal
 {
-	int i;
-	char c;
-	double d;
-	bool b;
-};
+	int population;
+	char color;
+	double avrgMigration;
+	bool wild;
+}
 #pragma pack()
 
 int main()
 {
-	someStruct ss;
-	anotherStruct as;
-	lastStruct ls;
-	
-	std::cout << "someStruct:\n" 
-		<< sizeof(someStruct) << " V " << sizeof(int) + sizeof(char) + sizeof(double) + sizeof(bool) << "\n"
-		<< &ss.i << " " << (void*)&ss.c << " " << &ss.d << " " << &ss.b << "\n\n";
-	
+	human Bill;
+	road countryRoad;
+	animal lion;
+	std::cout << "Human:\n"
+		<< sizeof(human) << " V " << sizeof(int) + sizeof(char) + sizeof(double) + sizeof(bool) << "\n"
+		<< &Bill.i << " " << (void*) &Bill.c << " " << &Bill.d << " " << &Bill.b << "\n"; 
+
 	std::cout << "anotherStruct:\n" 
-		<< sizeof(anotherStruct) << " V " << sizeof(int) + sizeof(char) + sizeof(double) + sizeof(bool) << "\n"
-		<< &as.b << " " << (void*)&as.c << " " << &as.i << " " << &as.d << "\n\n";
+		<< sizeof(road) << " V " << sizeof(int) + sizeof(char) + sizeof(double) + sizeof(bool) << "\n"
+		<< &countryRoad.closed << " " << (void*)&countryRoad.type << " " << &countryRoad.maxSpeed << " " << &countryRoad.length << "\n\n";
 		
 	std::cout << "lastStruct:\n" 
-		<< sizeof(lastStruct) << " V " << sizeof(int) + sizeof(char) + sizeof(double) + sizeof(bool) << "\n"
-		<< &ls.i << " " << (void*)&ls.c << " " << &ls.d << " " << &ls.b << "\n\n";
+		<< sizeof(animal) << " V " << sizeof(int) + sizeof(char) + sizeof(double) + sizeof(bool) << "\n"
+		<< &lion.population << " " << (void*)&lion.color << " " << &ls.avrgMigration << " " << &lion.wild << "\n\n";
 }
