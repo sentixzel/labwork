@@ -35,11 +35,11 @@ int main()
 		<< sizeof(human) << " V " << sizeof(int) + sizeof(char) + sizeof(double) + sizeof(bool) << "\n"
 		<< &Bill.i << " " << (void*) &Bill.c << " " << &Bill.d << " " << &Bill.b << "\n"; 
 
-	std::cout << "anotherStruct:\n" 
+	std::cout << "road:\n" 
 		<< sizeof(road) << " V " << sizeof(int) + sizeof(char) + sizeof(double) + sizeof(bool) << "\n"
 		<< &countryRoad.closed << " " << (void*)&countryRoad.type << " " << &countryRoad.maxSpeed << " " << &countryRoad.length << "\n\n";
 		
-	std::cout << "lastStruct:\n" 
+	std::cout << "animal:\n" 
 		<< sizeof(animal) << " V " << sizeof(int) + sizeof(char) + sizeof(double) + sizeof(bool) << "\n"
 		<< &lion.population << " " << (void*)&lion.color << " " << &ls.avrgMigration << " " << &lion.wild << "\n\n";
 }
